@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Team Members</h1>
-      <ul>
+      <h1 className="text-3xl font-bold">Team Members</h1>
+      <ul className="flex flex-col items-center p-6">
         {teamList.map((member) => {
           return (
             <li key={member.fname}>
@@ -31,6 +31,7 @@ function App() {
           );
         })}
       </ul>
+      <h2 className="text-2xl p-6">Add a Team Member</h2>
       <Form addTeamMember={addTeamMember} />
     </div>
   );
